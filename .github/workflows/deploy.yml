@@ -44,7 +44,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SERVER_PORT }}  # optional, default is 22
+      #    port: ${{ secrets.SERVER_PORT }}  # optional, default is 22
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
             docker stop spring-boot-app || true
